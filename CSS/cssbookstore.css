@@ -1,0 +1,158 @@
+/*----------------------------------*/
+
+/*
+.search input{
+  width: 340px;
+  border-radius: 7px;
+  border-style:groove red;
+}
+
+.header{
+  height: 150px;
+  background: linear-gradient(#0a3557, #234864);
+}
+.header h1{
+  font-size: 55px;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  color: white;
+}
+.header h2{ 
+  font-size: 30px;
+  font-family: "Helvetica Neue";
+  font-weight: 600;
+  color: white;
+}*/
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  background: linear-gradient(#390612, #970c2d);
+}
+
+.searchBar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.nav h1{
+  color: wheat;
+  margin: 0px;
+}
+#list a, li{
+  font-size: 16px;
+  margin: 0px;
+  color: aliceblue;
+}
+
+
+#mySearch {
+  width: 300px;
+  border-radius: 10px 0px 0px 10px;
+}
+#searchbutton {
+  height: 34px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+
+.footer {
+  background-color: #222;
+  color: #9d9d9d;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 50px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+/*
+#app{
+  margin-left: 15px;
+}*/
+
+/*----FLIP CONTEINER ----*/
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgba(3, 3, 3, 0.76);
+  min-height: 360px;
+}
+
+.flex-container > div {
+  background-color: white;
+  width: 18%;
+  margin: 3px;
+  text-align: center;
+  /*line-height: 35px;
+  font-size: 12px;*/
+}
+
+.flipper:hover,
+.flipper.hover {
+  transform: rotateY(180deg);
+}
+
+.flipper {
+  /*perspective: 1000;*/
+  border: 5px solid red;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  /* ESTA POSICION RELATIVE HACE QUE NO SE MUESTRE */
+}
+
+.front {
+  backface-visibility: hidden;
+}
+
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  /* ESTA POSICION ABSOLUTE HACE QUE NO SE MUESTRE */
+  transform: rotateY(180deg);
+  background: #f8f8f8;
+  top: 0;
+  left: 0;
+}
+
+/*
+.front {
+  width: 100%;
+ z-index: 2;
+ font-size: 2em;
+  display: inline-block;
+  background: rgba(33, 33, 33, 0.9);
+	color: #f8f8f8;
+	font-family: Courier;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 60px;
+    text-shadow: 0.1em 0.1em 0.05em #333;
+  left: 25%;
+  position: absolute;
+  transform: rotate(-0deg);
+}*/
+
+.portada {
+  width: 100%;
+  /* transform: rotateY(180deg);
+  background: #f8f8f8;*/
+}
+
+.detalle {
+  width: 30%;
+  /* transform: rotateY(180deg);
+  background: #f8f8f8;*/
+}
+
+.back p {
+  /*position: absolute;*/
+  text-align: justify;
+  padding: 0 10px;
+  font-family: arial;
+}

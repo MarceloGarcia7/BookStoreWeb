@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Book Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/CSS/cssbookstore.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+</head>
+
+<body>
+  
+    <div class="nav">
+      <ul id="list" class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <h1>Book - Store</h1>
+      <div class="searchBar">
+        <button id="searchbutton" class="btn">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+        <input id="mySearch" type="text" class="form-control" placeholder="Search">
+      </div>
+    </div>
+ 
+  <div id="app" class="flex-container">
+    <div class="flipper" v-for="item in bookStore">
+      <div class="front">
+        <img class="portada" v-bind:src="item.portada">
+      </div>
+      <div class="back">
+        <h4>{{item.titulo}}</h4>
+        <p>{{item.descripcion}}</p>
+        <div>
+            <a v-bind:href="item.detalle" data-fancybox="images" data-width="1048" data-height="665">
+              <button id = "botonF"  class="btn btn-primary">Open</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div>
+    <h1>Json ||data-fancybox width = 10% || class= "imgList" ontouchstart="this.classList.toggle('hover');" </h1>
+    <pre>{{ $data | json}}</pre>
+  </div>-->
+  <div class="footer">
+    <p>@ 2018 BOOKSTORE || All Rights Reserved</p>
+  </div>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+  <script src="bookstore.js"></script>
+  <!--<script type="text/javascript">
+    //var urlUsers = "https://randomuser.me/api/?results=10";
+    //var urlUsers = "http://api.openweathermap.org/data/2.5/forecast?id=2172797&APPID=f68585383622f70889d24366e064123f";
+    
+    new Vue({
+      el: "#main",
+      created: function() {
+
+        this.getUsers();
+      },
+
+      data: {
+        data: []
+      },
+
+      methods: {
+        getUsers: function() {
+          this.$http.get(urlUsers).then(function(response) {
+            this.data = response;
+          });
+
+        }
+      }
+    });
+  </script>-->
+</body>
+
+</html>
